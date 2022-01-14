@@ -1,0 +1,31 @@
+@import url(minireset.css);
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
+
+    --clr-gray: #4E5150;
+    --clr-gray1: #333333;
+    --clr-gray2: #4f4f4f;
+    --clr-gray3: #828282;
+    --clr-gray4: #BDBDBD;
+    --clr-gray5: #E0E0E0;
+    --clr-gray6: #f2f2f2;
+    --clr-orange: #F2994A;
+
+    --font-size-s: 0.625rem;
+    --font-size-m: 0.75rem;
+    --font-size-l: 0.75rem;
+    --font-size-xl: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    :root {
+        --font-size-s: 0.875rem;
+        --font-size-m: 0.875rem;
+        --font-size-l: 1.125rem;
+        --font-size-xl: 1.5rem;
+    }
+}
