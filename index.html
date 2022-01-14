@@ -10,11 +10,62 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Checkout Page Challenge</title>
 </head>
 
 <body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+  <main>
+    <div class="items">
+      <div class="card">
+        <div class="img-container col-span-2 row-span-4">
+          <img src="images/photo1.png" alt="a backpack">
+        </div>
+        <h3 class="col-span-3">Vintage Backbag</h3>
+        <p id="price-bag" class="row-span-2 price-new">$54.99</p>
+        <p class="col-span-2 row-span-2 price-old">$94.99</p>
+        <div class="qty-div col-span-3">
+          <button><span class="material-icons">
+              remove
+            </span></button>
+          <span id="qty-bag" class="quantity">1</span>
+          <button><span class="material-icons">
+              add
+            </span></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img-container col-span-2 row-span-4">
+          <img src="images/photo2.png" alt="a backpack">
+        </div>
+        <h3 class="col-span-3">Levi Shoes</h3>
+        <p id="price-bag" class="row-span-2 price-new">$74.99</p>
+        <p class="col-span-2 row-span-2 price-old">$124.99</p>
+        <div class="qty-div col-span-3">
+          <button><span class="material-icons">
+              remove
+            </span></button>
+          <span id="qty-bag" class="quantity">1</span>
+          <button><span class="material-icons">
+              add
+            </span></button>
+        </div>
+      </div>
+      <hr>
+
+    </div>
+    <div class="form"></div>
+  </main>
+  <footer>
+    <p>created by <a href="https://github.com/je-jo">je-jo</a> - <a
+        href="https://devchallenges.io/">devChallenges.io</a></p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
