@@ -27,13 +27,13 @@
           <h3 class="card__title">Vintage Backbag</h3>
           <p class="price">$54.99<span class="price--old">$94.99</span></p>
           <p class="quantity">
-            <button class="btn--operator">
+            <button class="btn--operator" id="minus--bag">
               <span class="material-icons">
                 remove
               </span>
             </button>
-            <span id="qty-bag" class="quantity__number">1</span>
-            <button class="btn--operator">
+            <span id="qty-bag" class="quantity__number"></span>
+            <button class="btn--operator" id="plus--bag">
               <span class="material-icons">
                 add
               </span>
@@ -47,13 +47,13 @@
           <h3 class="card__title">Levi Shoes</h3>
           <p class="price">$74.99<span class="price--old">$124.99</span></p>
           <p class="quantity">
-            <button class="btn--operator btn--minus">
+            <button class="btn--operator" id="minus--shoes">
               <span class="material-icons">
                 remove
               </span>
             </button>
-            <span id="qty-shoes" class="quantity__number">1</span>
-            <button class="btn--operator btn--plus">
+            <span id="qty-shoes" class="quantity__number"></span>
+            <button class="btn--operator" id="plus--shoes">
               <span class="material-icons">
                 add
               </span>
@@ -61,9 +61,12 @@
           </p>
         </div>
       </div>
-
-      <hr>
-      <hr>
+      <div class="card__totals">
+        <hr>
+        <p class="totals__title">Shipping<span id="shipping"></span></p>
+        <hr>
+        <p class="totals__title">Total<span id="total"></span></p>
+      </div>
 
     </div>
     <div class="form"></div>
