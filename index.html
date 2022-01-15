@@ -22,40 +22,47 @@
   <main>
     <div class="items">
       <div class="card">
-        <div class="img-container col-span-2 row-span-4">
-          <img src="images/photo1.png" alt="a backpack">
+        <img src="images/photo1.png" alt="a backpack" class="card__img">
+        <div class="card__content">
+          <h3 class="card__title">Vintage Backbag</h3>
+          <p class="price">$54.99<span class="price--old">$94.99</span></p>
+          <p class="quantity">
+            <button class="btn--operator">
+              <span class="material-icons">
+                remove
+              </span>
+            </button>
+            <span id="qty-bag" class="quantity__number">1</span>
+            <button class="btn--operator">
+              <span class="material-icons">
+                add
+              </span>
+            </button>
+          </p>
         </div>
-        <h3 class="col-span-3">Vintage Backbag</h3>
-        <p id="price-bag" class="row-span-2 price-new">$54.99</p>
-        <p class="col-span-2 row-span-2 price-old">$94.99</p>
-        <div class="qty-div col-span-3">
-          <button><span class="material-icons">
-              remove
-            </span></button>
-          <span id="qty-bag" class="quantity">1</span>
-          <button><span class="material-icons">
-              add
-            </span></button>
+      </div>
+      <div class="card">
+        <img src="images/photo2.png" alt="a backpack" class="card__img">
+        <div class="card__content">
+          <h3 class="card__title">Levi Shoes</h3>
+          <p class="price">$74.99<span class="price--old">$124.99</span></p>
+          <p class="quantity">
+            <button class="btn--operator btn--minus">
+              <span class="material-icons">
+                remove
+              </span>
+            </button>
+            <span id="qty-shoes" class="quantity__number">1</span>
+            <button class="btn--operator btn--plus">
+              <span class="material-icons">
+                add
+              </span>
+            </button>
+          </p>
         </div>
       </div>
 
-      <div class="card">
-        <div class="img-container col-span-2 row-span-4">
-          <img src="images/photo2.png" alt="a backpack">
-        </div>
-        <h3 class="col-span-3">Levi Shoes</h3>
-        <p id="price-bag" class="row-span-2 price-new">$74.99</p>
-        <p class="col-span-2 row-span-2 price-old">$124.99</p>
-        <div class="qty-div col-span-3">
-          <button><span class="material-icons">
-              remove
-            </span></button>
-          <span id="qty-bag" class="quantity">1</span>
-          <button><span class="material-icons">
-              add
-            </span></button>
-        </div>
-      </div>
+      <hr>
       <hr>
 
     </div>
