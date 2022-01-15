@@ -63,13 +63,64 @@
       </div>
       <div class="card__totals">
         <hr>
-        <p class="totals__title">Shipping<span id="shipping"></span></p>
+        <p class="totals__title">Shipping<span id="display-shipping"></span></p>
         <hr>
-        <p class="totals__title">Total<span id="total"></span></p>
+        <p class="totals__title">Total<span id="display-total"></span></p>
       </div>
 
     </div>
-    <div class="form"></div>
+    <div class="form">
+      <form action="">
+        <h2>Contact infomation</h2>
+        <label for="email">
+          E-mail:
+          <div class="input__container">
+            <span class="material-icons">
+              email
+            </span>
+            <input class="input" type="email" id="email" name="user-email" placeholder="Enter your email...">
+          </div>
+        </label>
+        <label for="phone">
+          Phone:
+          <div class="input__container">
+            <span class="material-icons">
+              call
+            </span>
+            <input class="input" type="tel" id="phone" name="user-phone" placeholder="Enter your phone...">
+          </div>
+        </label>
+        <h2>Shipping address</h2>
+        <label for="name">
+          Full name:
+          <div class="input__container">
+            <span class="material-icons">
+              account_circle
+            </span>
+            <input class="input" type="text" id="name" name="user-name" placeholder="Your name...">
+          </div>
+        </label>
+        <label for="address">
+          Address:
+          <div class="input__container">
+            <span class="material-icons">
+              home
+            </span>
+            <input class="input" type="text" id="address" name="user-address" placeholder="Your address...">
+          </div>
+        </label>
+        <label for="city">
+          City:
+          <div class="input__container">
+            <span class="material-icons">
+              location_city
+            </span>
+            <input class="input" type="text" id="city" name="user-city" placeholder="Your city...">
+          </div>
+        </label>
+        <button type="submit" class="btn--submit">Continue</button>
+      </form>
+    </div>
   </main>
   <footer>
     <p>created by <a href="https://github.com/je-jo">je-jo</a> - <a

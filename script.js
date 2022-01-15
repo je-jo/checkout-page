@@ -1,15 +1,15 @@
-let quantityShoes = document.querySelector("#qty-shoes");
+let displayQtyShoes = document.querySelector("#qty-shoes");
+let displayQtyBags = document.querySelector("#qty-bag");
+let displayShipping = document.querySelector("#display-shipping");
+let displayTotal = document.querySelector("#display-total");
 let addShoes = document.querySelector("#plus--shoes");
 let removeShoes = document.querySelector("#minus--shoes");
-let shoes = 0;
-let quantityBag = document.querySelector("#qty-bag");
 let addBag = document.querySelector("#plus--bag");
 let removeBag = document.querySelector("#minus--bag");
-let bag = 0;
+let countShoes = 0;
+let countBag = 0;
 let shippingPrice = 0;
-let shipping = document.querySelector("#shipping");
 let totalPrice = 0;
-let total = document.querySelector("#total");
 
 // function increaceCount(item) {
 //     item++;
@@ -30,55 +30,51 @@ let total = document.querySelector("#total");
 
 addShoes.addEventListener("click", () => {
     //increaceCount(shoes);
-    shoes++;
-    console.log(shoes);
+    countShoes++;
+    console.log(countShoes);
     updateCount();
 });
 
 removeShoes.addEventListener("click", () => {
     // decreaseCount(shoes);
-    if (shoes > 0) {
-        shoes--;
-        console.log(shoes);
+    if (countShoes > 0) {
+        countShoes--;
+        console.log(countShoes);
     } else {
-        console.log(shoes);
+        console.log(countShoes);
         return;
     }
     updateCount();
 });
 
 addBag.addEventListener("click", () => {
-    bag++;
-    console.log(bag);
+    countBag++;
+    console.log(countBag);
     updateCount();
 });
 
 removeBag.addEventListener("click", () => {
-    if (bag > 0) {
-        bag--;
-        console.log(bag);
+    if (countBag > 0) {
+        countBag--;
+        console.log(countBag);
     } else {
-        console.log(bag);
+        console.log(countBag);
         return;
     }
     updateCount();
 });
 
 function updateCount() {
-    quantityShoes.textContent = shoes;
-    quantityBag.textContent = bag;
-    if (shoes > 0 || bag > 0) {
+    displayQtyShoes.textContent = countShoes;
+    displayQtyBags.textContent = countBag;
+    if (countShoes > 0 || countBag > 0) {
         shippingPrice = 19; 
     } else {
         shippingPrice = 0;
     }
-    shipping.textContent = "$" + shippingPrice;
-    totalPrice = ((bag * 54.99) + (shoes * 74.99) + shippingPrice).toFixed(2);
-    total.textContent = "$" + totalPrice;
+    displayShipping.textContent = "$" + shippingPrice;
+    totalPrice = ((countBag * 54.99) + (countShoes * 74.99) + shippingPrice).toFixed(2);
+    displayTotal.textContent = "$" + totalPrice;
 }
 
-
-
-
 updateCount();
-
