@@ -79,6 +79,7 @@
               email
             </span>
             <input class="input" type="email" id="email" name="user-email" placeholder="Enter your email...">
+            <span class="focus"></span>
           </div>
         </label>
         <label for="phone">
@@ -88,6 +89,7 @@
               call
             </span>
             <input class="input" type="tel" id="phone" name="user-phone" placeholder="Enter your phone...">
+            <span class="focus"></span>
           </div>
         </label>
         <h2>Shipping address</h2>
@@ -98,6 +100,7 @@
               account_circle
             </span>
             <input class="input" type="text" id="name" name="user-name" placeholder="Your name...">
+            <span class="focus"></span>
           </div>
         </label>
         <label for="address">
@@ -107,6 +110,7 @@
               home
             </span>
             <input class="input" type="text" id="address" name="user-address" placeholder="Your address...">
+            <span class="focus"></span>
           </div>
         </label>
         <label for="city">
@@ -116,8 +120,46 @@
               location_city
             </span>
             <input class="input" type="text" id="city" name="user-city" placeholder="Your city...">
+            <span class="focus"></span>
           </div>
         </label>
+        <div class="input__wrapper">
+
+        <label for="country">
+          Country:
+          <div class="select input__container">
+            <span class="material-icons">
+              public
+            </span>
+            <select id="country" required>
+              <option selected value="">Your country..</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="HR">Croatia</option>
+              <option value="MK">Macedonia</option>
+              <option value="ME">Montenegro</option>
+              <option value="RS">Serbia</option>
+              <option value="SI">Slovenia
+              </option>
+            </select>
+            <span class="focus"></span>
+          </div>
+        </label>
+
+        <label for="postal">
+          Postal code:
+          <div class="input__container input__container--half">
+            <span class="material-icons">
+              markunread_mailbox
+            </span>
+            <input class="input" type="text" id="postal" name="user-postal" placeholder="Your postal code...">
+            <span class="focus"></span>
+          </div>
+        </label>
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" name="checkbox" />
+        Save this information for next time
+      </label>
         <button type="submit" class="btn--submit">Continue</button>
       </form>
     </div>
