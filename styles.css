@@ -168,7 +168,8 @@ label {
     margin: 0.5em 0 1.2em;
     display: grid;
     grid-template-columns: 2em auto;
-    place-items: center;
+    align-items: center;
+    justify-items: start;
     width: 100%;
     padding: 1em;
     font-size: var(--font-size-s);
@@ -193,6 +194,7 @@ label {
     line-height: inherit;
     border: none;
     outline: none;
+    align-self: s;
 }
 
 select {
@@ -230,7 +232,7 @@ select:focus + .focus {
 
 .input__wrapper {
     display: flex;
-    gap: 2em;
+    gap: 5%;
 }
 
 .input__wrapper > * {
@@ -243,6 +245,7 @@ select:focus + .focus {
     grid-template-columns: 1em auto;
     gap: 1.5em;
     align-items: center;
+    margin-top: 1.2em;
 }
 
 input[type="checkbox"] {
@@ -269,7 +272,7 @@ footer {
     margin-top: auto;
     text-align: center;
     font-size: 0.875rem;
-    padding: 1em;
+    padding: 2.5em 0 1em;
     color: var(--clr-gray4);
 }
 

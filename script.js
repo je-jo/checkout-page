@@ -1,3 +1,5 @@
+//counters and totals 
+
 let displayQtyShoes = document.querySelector("#qty-shoes");
 let displayQtyBags = document.querySelector("#qty-bag");
 let displayShipping = document.querySelector("#display-shipping");
@@ -78,3 +80,5 @@ function updateCount() {
 }
 
 updateCount();
+
+// form validation 
