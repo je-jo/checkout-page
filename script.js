@@ -13,37 +13,15 @@ let countBag = 0;
 let shippingPrice = 0;
 let totalPrice = 0;
 
-// function increaceCount(item) {
-//     item++;
-//     console.log(item);
-//     updateCount();
-// }
-
-// function decreaseCount(item) {
-//     if (item > 0) {
-//         item--;
-//         console.log(item);
-//     } else {
-//         console.log(item);
-//         return;
-//     }
-//     updateCount();
-// }
-
 addShoes.addEventListener("click", () => {
-    //increaceCount(shoes);
     countShoes++;
-    console.log(countShoes);
     updateCount();
 });
 
 removeShoes.addEventListener("click", () => {
-    // decreaseCount(shoes);
     if (countShoes > 0) {
         countShoes--;
-        console.log(countShoes);
     } else {
-        console.log(countShoes);
         return;
     }
     updateCount();
@@ -51,16 +29,13 @@ removeShoes.addEventListener("click", () => {
 
 addBag.addEventListener("click", () => {
     countBag++;
-    console.log(countBag);
     updateCount();
 });
 
 removeBag.addEventListener("click", () => {
     if (countBag > 0) {
         countBag--;
-        console.log(countBag);
     } else {
-        console.log(countBag);
         return;
     }
     updateCount();
@@ -70,7 +45,7 @@ function updateCount() {
     displayQtyShoes.textContent = countShoes;
     displayQtyBags.textContent = countBag;
     if (countShoes > 0 || countBag > 0) {
-        shippingPrice = 19; 
+        shippingPrice = 19;
     } else {
         shippingPrice = 0;
     }
@@ -82,3 +57,138 @@ function updateCount() {
 updateCount();
 
 // form validation 
+
+const form = document.querySelector("#form");
+const modal = document.querySelector("#modal");
+
+const email = document.getElementById('email');
+const emailError = document.querySelector('#email + span.error');
+const userName = document.getElementById('name');
+const nameError = document.querySelector('#name + span.error');
+const address = document.getElementById('address');
+const addressError = document.querySelector('#address + span.error');
+const city = document.getElementById('city');
+const cityError = document.querySelector('#city + span.error');
+const postal = document.getElementById('postal');
+const postalError = document.querySelector('#postal + span.error');
+
+const required = [...document.querySelectorAll('*[required]')];
+let errors;
+
+function showEmailError() {
+    if (email.validity.valueMissing) {
+        emailError.textContent = 'Please enter your e-mail address';
+    }
+    else if (email.validity.typeMismatch) {
+        emailError.textContent = 'Entered value needs to be an e-mail address.';
+    }
+}
+
+function showNameError() {
+    if (userName.validity.valueMissing) {
+        nameError.textContent = 'Please enter your full name';
+    }
+    else if (userName.validity.patternMismatch) {
+        nameError.textContent = 'Name can only contain alphanumeric characters.';
+    }
+}
+
+function showAddressError() {
+    if (address.validity.valueMissing) {
+        addressError.textContent = 'Please enter your address.';
+    }
+    showGeneralError();
+}
+
+function showCityError() {
+    if (city.validity.valueMissing) {
+        cityError.textContent = 'Please enter your city.';
+    }
+    showGeneralError();
+}
+
+function showPostalError() {
+    if (postal.validity.valueMissing) {
+        postalError.textContent = 'Please enter your city.';
+    }
+    showGeneralError();
+}
+
+function showGeneralError() {
+    for (i = 0; i < required.length; i++) {
+        if (required[i].validity.valueMissing) {
+            required[i].nextElementSibling.textContent = "This is a required field"
+            errors = true;
+        }
+        else {
+            required[i].nextElementSibling.textContent = ""
+            errors = false;
+        }
+    }
+}
+
+email.addEventListener('input', () => {
+    if (email.validity.valid) {
+        emailError.textContent = '';
+    } else {
+        showEmailError();
+    }
+});
+
+userName.addEventListener('input', () => {
+    if (userName.validity.valid) {
+        nameError.textContent = '';
+    } else {
+        showNameError();
+    }
+});
+
+address.addEventListener('input', () => {
+    if (address.validity.valid) {
+        addressError.textContent = '';
+    } else {
+        showAddressError();
+    }
+});
+
+city.addEventListener('input', () => {
+    if (city.validity.valid) {
+        cityError.textContent = '';
+    } else {
+        showCityError();
+    }
+});
+
+postal.addEventListener('input', () => {
+    if (postal.validity.valid) {
+        postalError.textContent = '';
+    } else {
+        showPostalError();
+    }
+});
+
+form.addEventListener('submit', function (event) {
+    showGeneralError();
+    modal.style.display = "grid";
+    if (countShoes == 0 && countBag == 0) {
+        modal.textContent = "You haven't ordered anything..";
+        event.preventDefault();
+    } else if (!email.validity.valid) {
+        modal.textContent = "Please review your email";
+        event.preventDefault();
+    } else if (!userName.validity.valid) {
+        modal.textContent = "Please review your name";
+        event.preventDefault();
+    }
+    else if (errors == true) {
+        modal.textContent = "Please review all the required fields..";
+        event.preventDefault();
+    }
+    else {
+    modal.textContent = "Success!";
+    }
+});
+
+window.addEventListener("click", () => {
+        modal.style.display = "none";
+});

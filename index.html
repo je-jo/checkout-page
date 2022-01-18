@@ -70,7 +70,7 @@
 
     </div>
     <div class="form">
-      <form action="" novalidate>
+      <form action="" id="form" novalidate>
         <h2>Contact infomation</h2>
         <label for="email">
           E-mail:
@@ -78,7 +78,8 @@
             <span class="material-icons">
               email
             </span>
-            <input class="input" type="email" id="email" name="user-email" placeholder="Enter your email...">
+            <input class="input" type="email" id="email" name="user-email" placeholder="Enter your email..." required>
+            <span class="error" aria-live="polite"></span>
             <span class="focus"></span>
           </div>
         </label>
@@ -99,7 +100,9 @@
             <span class="material-icons">
               account_circle
             </span>
-            <input class="input" type="text" id="name" name="user-name" placeholder="Your name...">
+            <input class="input" type="text" id="name" name="user-name" placeholder="Your name..." required
+              pattern="[a-zA-Z0-9]+">
+            <span class="error" aria-live="polite"></span>
             <span class="focus"></span>
           </div>
         </label>
@@ -109,7 +112,8 @@
             <span class="material-icons">
               home
             </span>
-            <input class="input" type="text" id="address" name="user-address" placeholder="Your address...">
+            <input class="input" type="text" id="address" name="user-address" placeholder="Your address..." required>
+            <span class="error" aria-live="polite"></span>
             <span class="focus"></span>
           </div>
         </label>
@@ -119,50 +123,55 @@
             <span class="material-icons">
               location_city
             </span>
-            <input class="input" type="text" id="city" name="user-city" placeholder="Your city...">
+            <input class="input" type="text" id="city" name="user-city" placeholder="Your city..." required>
+            <span class="error" aria-live="polite"></span>
             <span class="focus"></span>
           </div>
         </label>
         <div class="input__wrapper">
 
-        <label for="country">
-          Country:
-          <div class="select input__container">
-            <span class="material-icons">
-              public
-            </span>
-            <select id="country" required>
-              <option selected value="">Your country..</option>
-              <option value="BA">Bosnia and Herzegovina</option>
-              <option value="HR">Croatia</option>
-              <option value="MK">Macedonia</option>
-              <option value="ME">Montenegro</option>
-              <option value="RS">Serbia</option>
-              <option value="SI">Slovenia
-              </option>
-            </select>
-            <span class="focus"></span>
-          </div>
-        </label>
+          <label for="country">
+            Country:
+            <div class="select input__container">
+              <span class="material-icons">
+                public
+              </span>
+              <select id="country" required>
+                <option selected value="">Your country..</option>
+                <option value="BA">Bosnia and Herzegovina</option>
+                <option value="HR">Croatia</option>
+                <option value="MK">Macedonia</option>
+                <option value="ME">Montenegro</option>
+                <option value="RS">Serbia</option>
+                <option value="SI">Slovenia
+                </option>
+              </select>
+              <span class="error" aria-live="polite"></span>
+              <span class="focus"></span>
+            </div>
+          </label>
 
-        <label for="postal">
-          Postal code:
-          <div class="input__container">
-            <span class="material-icons">
-              markunread_mailbox
-            </span>
-            <input class="input" type="text" id="postal" name="user-postal" placeholder="Your postal code...">
-            <span class="focus"></span>
-          </div>
+          <label for="postal">
+            Postal code:
+            <div class="input__container">
+              <span class="material-icons">
+                markunread_mailbox
+              </span>
+              <input class="input" type="text" id="postal" name="user-postal" placeholder="Your postal code..."
+                required>
+              <span class="error" aria-live="polite"></span>
+              <span class="focus"></span>
+            </div>
+          </label>
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" name="checkbox" />
+          Save this information for next time
         </label>
-      </div>
-      <label class="checkbox">
-        <input type="checkbox" name="checkbox" />
-        Save this information for next time
-      </label>
-        <button type="submit" class="btn--submit">Continue</button>
+        <input type="submit" class="btn--submit" value="Continue"></input>
       </form>
     </div>
+    <div id="modal"></div>
   </main>
   <footer>
     <p>created by <a href="https://github.com/je-jo">je-jo</a> - <a

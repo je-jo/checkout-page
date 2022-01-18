@@ -32,12 +32,11 @@
 
 ![screenshot](https://raw.githubusercontent.com/je-jo/checkout-page/main/images/checkout-page.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+This was quite an interesting project, lots to learn.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+User can choose the number of items, and the calculations are shown on the page.
+
+Basic JS form validation is implemented.
 
 ### Built With
 
@@ -57,8 +56,8 @@ This application/site was created as a submission to a [DevChallenges](https://d
 - [x] User story: I can input email, phone, full name, address, city, country, and postal code
 - [x] User story: I can input the number of items
 - [x] User story: I can select at least 3 countries from the dropdown
-- [] User story: When I click submit button or press enter, I can see a warning if validation fails
-- [] User story: When I click submit button or press enter, I can see a successful alert if validation succeeds
+- [x] User story: When I click submit button or press enter, I can see a warning if validation fails
+- [x] User story: When I click submit button or press enter, I can see a successful alert if validation succeeds
 
 ## Acknowledgements
 
