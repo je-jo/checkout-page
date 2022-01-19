@@ -142,13 +142,6 @@ main {
     font-size: 0.875rem;
 }
 
-
-
-.form {
-   flex-grow: 1;
-
-}
-
 h2 {
     font-size: var(--font-size-l);
     color: var(--clr-gray1);
@@ -326,7 +319,10 @@ footer a:hover {
 
     main {
         flex-direction: row-reverse;
-        gap: 100px;
+    }
+
+    .form {
+        width: 50%;
     }
 
     #modal {
