@@ -321,8 +321,8 @@ footer a:hover {
         flex-direction: row-reverse;
     }
 
-    .form {
-        width: 50%;
+    .items {
+        min-width: 318px;
     }
 
     #modal {
