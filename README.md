@@ -47,6 +47,7 @@ Basic JS form validation is implemented.
 - CSS Grid
 - Mobile-first workflow
 - [Minireset](https://awesomeopensource.com/project/jgthms/minireset.css?categoryPage=29) - A tiny modern CSS reset. 
+- [Clippy](https://bennettfeely.com/clippy/) - A tool to generate clip-path shapes.
 
 ## Features
 

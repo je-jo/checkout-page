@@ -65,12 +65,6 @@ const email = document.getElementById('email');
 const emailError = document.querySelector('#email + span.error');
 const userName = document.getElementById('name');
 const nameError = document.querySelector('#name + span.error');
-const address = document.getElementById('address');
-const addressError = document.querySelector('#address + span.error');
-const city = document.getElementById('city');
-const cityError = document.querySelector('#city + span.error');
-const postal = document.getElementById('postal');
-const postalError = document.querySelector('#postal + span.error');
 
 const required = [...document.querySelectorAll('*[required]')];
 let errors;
@@ -91,27 +85,6 @@ function showNameError() {
     else if (userName.validity.patternMismatch) {
         nameError.textContent = 'Name can only contain alphanumeric characters.';
     }
-}
-
-function showAddressError() {
-    if (address.validity.valueMissing) {
-        addressError.textContent = 'Please enter your address.';
-    }
-    showGeneralError();
-}
-
-function showCityError() {
-    if (city.validity.valueMissing) {
-        cityError.textContent = 'Please enter your city.';
-    }
-    showGeneralError();
-}
-
-function showPostalError() {
-    if (postal.validity.valueMissing) {
-        postalError.textContent = 'Please enter your city.';
-    }
-    showGeneralError();
 }
 
 function showGeneralError() {
@@ -143,33 +116,9 @@ userName.addEventListener('input', () => {
     }
 });
 
-address.addEventListener('input', () => {
-    if (address.validity.valid) {
-        addressError.textContent = '';
-    } else {
-        showAddressError();
-    }
-});
-
-city.addEventListener('input', () => {
-    if (city.validity.valid) {
-        cityError.textContent = '';
-    } else {
-        showCityError();
-    }
-});
-
-postal.addEventListener('input', () => {
-    if (postal.validity.valid) {
-        postalError.textContent = '';
-    } else {
-        showPostalError();
-    }
-});
-
 form.addEventListener('submit', function (event) {
     showGeneralError();
-    modal.style.display = "grid";
+    modal.style.display = "block";
     if (countShoes == 0 && countBag == 0) {
         modal.textContent = "You haven't ordered anything..";
         event.preventDefault();
